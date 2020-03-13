@@ -18,14 +18,14 @@
 	<!-- <link href="css/modern.css" rel="stylesheet"> -->
 
 	<!-- BEGIN SETTINGS -->
-	<link href="css/modern.css" rel="stylesheet">
-<!-- 	<style>
+	<!-- You can remove this after picking a style -->
+	<style>
 		body {
 			opacity: 0;
 		}
 	</style>
 	<script src="js/settings.js"></script>
- -->	<!-- END SETTINGS -->
+	<!-- END SETTINGS -->
 </head>
 
 <body>
@@ -39,43 +39,139 @@
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-header">
-						Mailtrap
+						Pages
 					</li>
 					<li class="sidebar-item active">
-						<a href="#dashboards" class="sidebar-link">
+						<a href="#dashboards" data-toggle="collapse" class="sidebar-link">
               <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboards</span>
+              <span class="sidebar-badge badge badge-primary">5</span>
             </a>
-						<ul id="dashboards" class="sidebar-dropdown list-unstyled " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-default.html">Overview</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-default.html">By Category</a></li>
+						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-parent="#sidebar">
+							<li class="sidebar-item active"><a class="sidebar-link" href="dashboard-default.html">Default</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html">Analytics</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-e-commerce.html">E-commerce</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-social.html">Social</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-crypto.html">Crypto</a></li>
 						</ul>
 					</li>
 					<li class="sidebar-item">
-						<a href="#pages" class="sidebar-link">
-              <i class="align-middle" data-feather="layout"></i> <span class="align-middle">Sending</span> <span class="sidebar-badge badge badge-primary">New</span>
+						<a href="#pages" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="layout"></i> <span class="align-middle">Pages</span>
             </a>
-						<ul id="pages" class="sidebar-dropdown list-unstyled " data-parent="#sidebar">
+						<ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="pages-profile.html">Profile</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="pages-clients.html">Clients</a></li>
+							<li class="sidebar-item">
+								<a href="#projects" data-toggle="collapse" class="sidebar-link collapsed">
+                  Projects
+                </a>
+								<ul id="projects" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="pages-projects-list.html">List</a>
+									</li>
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="pages-projects-detail.html">Detail <span class="sidebar-badge badge badge-primary">New</span></a>
+									</li>
+								</ul>
+							</li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-invoice.html">Invoice</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-pricing.html">Pricing</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-tasks.html">Tasks</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-chat.html">Chat <span class="sidebar-badge badge badge-primary">New</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
 						</ul>
 					</li>
 					<li class="sidebar-item">
 						<a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
-              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Testing</span>
+              <i class="align-middle" data-feather="users"></i> <span class="align-middle">Auth</span>
+              <span class="sidebar-badge badge badge-secondary">Special</span>
             </a>
 						<ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Inboaxes</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Shared Inboxes</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Sign In</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Sign Up</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-reset-password.html">Reset Password</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-404.html">404 Page</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pages-500.html">500 Page</a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#layouts" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="monitor"></i> <span class="align-middle">Layouts</span>
+            </a>
+						<ul id="layouts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="layouts-sidebar-sticky.html">Sticky Sidebar</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="layouts-sidebar-collapsed.html">Collapsed Sidebar</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="layouts-boxed.html">Boxed Layout</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html?theme=classic">Classic Theme</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html?theme=corporate">Corporate Theme <span class="sidebar-badge badge badge-primary">New</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="dashboard-analytics.html?theme=modern">Modern Theme <span class="sidebar-badge badge badge-primary">New</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#documentation" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="book-open"></i> <span class="align-middle">Documentation</span>
+            </a>
+						<ul id="documentation" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="docs-introduction.html">Introduction</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="docs-installation.html">Getting Started</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="docs-plugins.html">Plugins</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="docs-changelog.html">Changelog</a></li>
 						</ul>
 					</li>
 
 					<li class="sidebar-header">
-						Account & Settings
+						Tools & Components
 					</li>
 					<li class="sidebar-item">
-						<a href="#form-plugins" class="sidebar-link collapsed">
-              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Billing</span>
+						<a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="grid"></i> <span class="align-middle">UI Elements</span>
+            </a>
+						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-carousel.html">Carousel</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-embed-video.html">Embed Video</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General <span class="sidebar-badge badge badge-info">10+</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-grid.html">Grid</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-modals.html">Modals</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#icons" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="heart"></i> <span class="align-middle">Icons</span>
+              <span class="sidebar-badge badge badge-info">1500+</span>
+            </a>
+						<ul id="icons" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="icons-feather.html">Feather</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="icons-font-awesome.html">Font Awesome</a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
+            </a>
+						<ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">Layouts</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="forms-input-groups.html">Input Groups</a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="tables-bootstrap.html">
+              <i class="align-middle" data-feather="list"></i> <span class="align-middle">Tables</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Plugin & Addons
+					</li>
+					<li class="sidebar-item">
+						<a href="#form-plugins" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Form Plugins</span>
             </a>
 						<ul id="form-plugins" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="forms-advanced-inputs.html">Advanced Inputs</a></li>
@@ -98,6 +194,16 @@
 					</li>
 
 					<li class="sidebar-item">
+						<a href="#charts" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="pie-chart"></i> <span class="align-middle">Charts</span>
+              <span class="sidebar-badge badge badge-primary">New</span>
+            </a>
+						<ul id="charts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">Chart.js</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">ApexCharts <span class="sidebar-badge badge badge-primary">New</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="notifications.html">
               <i class="align-middle" data-feather="bell"></i> <span class="align-middle">Notifications</span>
             </a>
@@ -115,6 +221,45 @@
 						<a class="sidebar-link" href="calendar.html">
               <i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Calendar</span>
             </a>
+					</li>
+					<li class="sidebar-item">
+						<a href="#multi" data-toggle="collapse" class="sidebar-link collapsed">
+              <i class="align-middle" data-feather="share-2"></i> <span class="align-middle">Multi Level</span>
+            </a>
+						<ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+							<li class="sidebar-item">
+								<a href="#multi-2" data-toggle="collapse" class="sidebar-link collapsed">
+                  Two Levels
+                </a>
+								<ul id="multi-2" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="#">Item 1</a>
+										<a class="sidebar-link" href="#">Item 2</a>
+									</li>
+								</ul>
+							</li>
+							<li class="sidebar-item">
+								<a href="#multi-3" data-toggle="collapse" class="sidebar-link collapsed">
+                  Three Levels
+                </a>
+								<ul id="multi-3" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a href="#multi-3-1" data-toggle="collapse" class="sidebar-link collapsed">
+                      Item 1
+                    </a>
+										<ul id="multi-3-1" class="sidebar-dropdown list-unstyled collapse">
+											<li class="sidebar-item">
+												<a class="sidebar-link" href="#">Item 1</a>
+												<a class="sidebar-link" href="#">Item 2</a>
+											</li>
+										</ul>
+									</li>
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="#">Item 2</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 				</ul>
 
@@ -431,7 +576,7 @@
 					</div>
 
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-12 col-lg-8 d-flex">
 							<div class="card flex-fill w-100">
 								<div class="card-header">
 									<span class="badge badge-primary float-right">Monthly</span>
@@ -444,10 +589,193 @@
 								</div>
 							</div>
 						</div>
+						<div class="col-12 col-lg-4 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<span class="badge badge-info float-right">Today</span>
+									<h5 class="card-title mb-0">Daily feed</h5>
+								</div>
+								<div class="card-body">
+									<div class="media">
+										<img src="img/avatars/avatar-5.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Ashley Briggs">
+										<div class="media-body">
+											<small class="float-right text-navy">5m ago</small>
+											<strong>Ashley Briggs</strong> started following <strong>Stacie Hall</strong><br />
+											<small class="text-muted">Today 7:51 pm</small><br />
+
+										</div>
+									</div>
+
+									<hr />
+									<div class="media">
+										<img src="img/avatars/avatar.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Chris Wood">
+										<div class="media-body">
+											<small class="float-right text-navy">30m ago</small>
+											<strong>Chris Wood</strong> posted something on <strong>Stacie Hall</strong>'s timeline<br />
+											<small class="text-muted">Today 7:21 pm</small>
+
+											<div class="border text-sm text-muted p-2 mt-1">
+												Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing...
+											</div>
+										</div>
+									</div>
+
+									<hr />
+									<div class="media">
+										<img src="img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Stacie Hall">
+										<div class="media-body">
+											<small class="float-right text-navy">1h ago</small>
+											<strong>Stacie Hall</strong> posted a new blog<br />
+
+											<small class="text-muted">Today 6:35 pm</small>
+										</div>
+									</div>
+
+									<hr />
+									<a href="#" class="btn btn-primary btn-block">Load more</a>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-12 col-lg-6 col-xl-4 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<div class="dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Calendar</h5>
+								</div>
+								<div class="card-body d-flex">
+									<div class="align-self-center w-100">
+										<div class="chart">
+											<div id="datetimepicker-dashboard"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4 d-none d-xl-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<div class="dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Weekly sales</h5>
+								</div>
+								<div class="card-body d-flex">
+									<div class="align-self-center w-100">
+										<div class="py-3">
+											<div class="chart chart-xs">
+												<canvas id="chartjs-dashboard-pie"></canvas>
+											</div>
+										</div>
+
+										<table class="table mb-0">
+											<thead>
+												<tr>
+													<th>Source</th>
+													<th class="text-right">Revenue</th>
+													<th class="text-right">Value</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><i class="fas fa-square-full text-primary"></i> Direct</td>
+													<td class="text-right">$ 2602</td>
+													<td class="text-right text-success">+43%</td>
+												</tr>
+												<tr>
+													<td><i class="fas fa-square-full text-warning"></i> Affiliate</td>
+													<td class="text-right">$ 1253</td>
+													<td class="text-right text-success">+13%</td>
+												</tr>
+												<tr>
+													<td><i class="fas fa-square-full text-danger"></i> E-mail</td>
+													<td class="text-right">$ 541</td>
+													<td class="text-right text-success">+24%</td>
+												</tr>
+												<tr>
+													<td><i class="fas fa-square-full text-dark"></i> Other</td>
+													<td class="text-right">$ 1465</td>
+													<td class="text-right text-success">+11%</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-6 col-xl-4 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<div class="dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Appointments</h5>
+								</div>
+								<div class="p-4 bg-light">
+									<h2>You have a meeting today!</h2>
+									<p class="mb-0 text-sm">Your next meeting is in 2 hours. Check your <a href="#">schedule</a> to see the details.</p>
+								</div>
+								<div class="card-body">
+									<ul class="timeline">
+										<li class="timeline-item">
+											<strong>Chat with Carl and Ashley</strong>
+											<span class="float-right text-muted text-sm">30m ago</span>
+											<p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu...</p>
+										</li>
+										<li class="timeline-item">
+											<strong>The big launch</strong>
+											<span class="float-right text-muted text-sm">2h ago</span>
+											<p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum
+												nunc...</p>
+										</li>
+										<li class="timeline-item">
+											<strong>Coffee break</strong>
+											<span class="float-right text-muted text-sm">3h ago</span>
+											<p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae
+												tortor...</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-lg-6 col-xl-8 d-flex">
 							<div class="card flex-fill">
 								<div class="card-header">
 									<div class="card-actions float-right">
@@ -541,6 +869,31 @@
 										</tr>
 									</tbody>
 								</table>
+							</div>
+						</div>
+						<div class="col-12 col-lg-6 col-xl-4 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<div class="dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+              <i class="align-middle" data-feather="more-horizontal"></i>
+            </a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Sales / Revenue</h5>
+								</div>
+								<div class="card-body d-flex w-100">
+									<div class="align-self-center chart chart-lg">
+										<canvas id="chartjs-dashboard-bar"></canvas>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
