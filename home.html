@@ -27,6 +27,9 @@
 	</style>
 	<script src="js/settings.js"></script>
  -->	<!-- END SETTINGS -->
+    <style>
+        .dropdown-menu {top: -110px!important; left:60px!important;}
+    </style>
 </head>
 
 <body>
@@ -39,9 +42,6 @@
         </a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Mailtrap
-					</li>
 					<li class="sidebar-item active">
 						<a href="#dashboards" class="sidebar-link">
               <i class="align-middle" data-feather="home"></i> <span class="align-middle">Home</span>
@@ -107,7 +107,7 @@
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
                 <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded-circle mr-1" alt="Chris Wood" /> <span class="text-white">Chris Wood</span>
               </a>
-							<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-menu dropdown-menu-right" style="top: -200px!important">
 								<a class="dropdown-item" href="pages-profile.html">Profile</a>
 								<a class="dropdown-item" href="#">Help</a>
 								<a class="dropdown-item" href="#">Sign out</a>
@@ -128,217 +128,278 @@
 						</div>
 
 						<div class="col-auto ml-auto text-right mt-n1">
-							<span class="dropdown mr-2">
-      <button class="btn btn-light bg-white shadow-sm dropdown-toggle" id="day" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="align-middle mt-n1" data-feather="calendar"></i> Today
-      </button>
-      <div class="dropdown-menu" aria-labelledby="day">
-        <h6 class="dropdown-header">Settings</h6>
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </span>
-
-							<button class="btn btn-primary shadow-sm">
-      <i class="align-middle" data-feather="filter">&nbsp;</i>
-    </button>
-							<button class="btn btn-primary shadow-sm">
-      <i class="align-middle" data-feather="refresh-cw">&nbsp;</i>
-    </button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 col-sm-6 col-xl d-flex">
-							<div class="card flex-fill">
-								<div class="card-body py-4">
-									<div class="media">
-										<div class="d-inline-block mt-2 mr-3">
-											<i class="feather-lg text-primary" data-feather="shopping-cart"></i>
-										</div>
-										<div class="media-body">
-											<h3 class="mb-2">2.562</h3>
-											<div class="mb-0">Sales Today</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-xl d-flex">
-							<div class="card flex-fill">
-								<div class="card-body py-4">
-									<div class="media">
-										<div class="d-inline-block mt-2 mr-3">
-											<i class="feather-lg text-warning" data-feather="activity"></i>
-										</div>
-										<div class="media-body">
-											<h3 class="mb-2">17.212</h3>
-											<div class="mb-0">Visitors Today</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-xl d-flex">
-							<div class="card flex-fill">
-								<div class="card-body py-4">
-									<div class="media">
-										<div class="d-inline-block mt-2 mr-3">
-											<i class="feather-lg text-success" data-feather="dollar-sign"></i>
-										</div>
-										<div class="media-body">
-											<h3 class="mb-2">$ 24.300</h3>
-											<div class="mb-0">Total Earnings</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-xl d-flex">
-							<div class="card flex-fill">
-								<div class="card-body py-4">
-									<div class="media">
-										<div class="d-inline-block mt-2 mr-3">
-											<i class="feather-lg text-danger" data-feather="shopping-bag"></i>
-										</div>
-										<div class="media-body">
-											<h3 class="mb-2">43</h3>
-											<div class="mb-0">Pending Orders</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-xl d-none d-xxl-flex">
-							<div class="card flex-fill">
-								<div class="card-body py-4">
-									<div class="media">
-										<div class="d-inline-block mt-2 mr-3">
-											<i class="feather-lg text-info" data-feather="dollar-sign"></i>
-										</div>
-										<div class="media-body">
-											<h3 class="mb-2">$ 18.700</h3>
-											<div class="mb-0">Total Revenue</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                            <button class="btn btn-outline-primary">Create project</button>
+                        </div>
 					</div>
 
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
-									<span class="badge badge-primary float-right">Monthly</span>
-									<h5 class="card-title mb-0">Total Revenue</h5>
-								</div>
-								<div class="card-body">
-									<div class="chart chart-lg">
-										<canvas id="chartjs-dashboard-line"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card flex-fill">
 								<div class="card-header">
 									<div class="card-actions float-right">
-										<div class="dropdown show">
-											<a href="#" data-toggle="dropdown" data-display="static">
-              <i class="align-middle" data-feather="more-horizontal"></i>
-            </a>
-
-											<div class="dropdown-menu dropdown-menu-right">
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</div>
+                                        <input type="text" class="form-control" placeholder="Creat Inbox">
+<!--                                        <button class="btn btn-outline-primary">Create Inbox</button>-->
 									</div>
-									<h5 class="card-title mb-0">Latest Projects</h5>
+									<h2 class="card-title mb-0">Coupler.io</h2>
+                                    
 								</div>
-								<table id="datatables-dashboard-projects" class="table table-striped my-0">
+                                <table class="table table-striped">
 									<thead>
 										<tr>
-											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Assignee</th>
+											<th style="width:30%;">Inboxes</th>
+											<th style="width:15%">Total Sent</th>
+											<th class="d-none d-md-table-cell" style="width:15%">Messages</th>
+                                            <th class="d-none d-md-table-cell" style="width:10%">Max Size</th>
+                                            <th class="d-none d-md-table-cell" style="width:15%">Last Message</th>
+											<th class="d-none d-md-table-cell" style="width:35%">Actions</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>Project Apollo</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Carl Jenkins</td>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Fireball</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-danger">Cancelled</span></td>
-											<td class="d-none d-md-table-cell">Bertha Martin</td>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Hades</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Stacie Hall</td>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Nitro</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">Carl Jenkins</td>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Phoenix</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Bertha Martin</td>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project X</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Stacie Hall</td>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Romeo</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Ashley Briggs</td>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Wombat</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">Bertha Martin</td>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
 										<tr>
-											<td>Project Zircon</td>
-											<td class="d-none d-xl-table-cell">01/01/2018</td>
-											<td class="d-none d-xl-table-cell">31/06/2018</td>
-											<td><span class="badge badge-danger">Cancelled</span></td>
-											<td class="d-none d-md-table-cell">Stacie Hall</td>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
 										</tr>
-									</tbody>
+										<tr>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Coupler Development</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                0 / 9
+                                            </td>
+											<td>600</td>
+											<td>6 month ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Mailtrap Staging</td>
+											<td>0</td>
+											<td>
+												<a href="#"><i class="align-middle" data-feather="mail"></i></a>
+                                                160 / 162
+                                            </td>
+											<td>600</td>
+											<td>an hour ago</td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="settings"></i></a>
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+
+                                    </tbody>
 								</table>
+
 							</div>
 						</div>
 					</div>
