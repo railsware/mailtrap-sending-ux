@@ -124,14 +124,89 @@
 
 					<div class="row mb-2 mb-xl-4">
 						<div class="col-auto d-none d-sm-block">
-							<h3>Welcome back, Chris!</h3>
+							<h3>Recent Activity</h3>
 						</div>
 
 						<div class="col-auto ml-auto text-right mt-n1">
                             <button class="btn btn-outline-primary">Create project</button>
                         </div>
 					</div>
+                    <div class="row">
+						<div class="col-lg-4 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Delivered</h5>
+                                </div>
+                                <div class="card-body my-2">
+                                    <div class="row d-flex align-items-center mb-4">
+                                        <div class="col-6">
+                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
+                                                17 212
+                                            </h2>
+                                        </div>
+                                       <div class="col-6 text-right">
+                                            <span class="text-success">+35%</span>
+                                            <span class="text-muted">vs Feb</span>
+                                        </div>
+                                    </div>
+                                        <div class="chart chart-xs">
+										<canvas id="chartjs-dashboard-line"></canvas>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Unique Opens</h5>
+                                </div>
+                                <div class="card-body my-2">
+                                    <div class="row d-flex align-items-center mb-4">
+                                        <div class="col-6">
+                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
+                                                5 679
+                                            </h2>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span class="text-success">+7%</span>
+                                            <span class="text-muted">vs Feb</span>
+                                        </div>
+                                    </div>
 
+                                    <div class="chart chart-xs">
+										<canvas id="chartjs-dashboard-line-2nd-on-screen"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-header">
+                                    <h5 class="card-title mb-0">Unique Clicks</h5>
+                                </div>
+                                <div class="card-body my-2">
+                                    <div class="row d-flex align-items-center mb-4">
+                                        <div class="col-6">
+                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
+                                                1 147
+                                            </h2>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span class="text-warning">-3%</span>
+                                            <span class="text-muted">vs Feb</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="chart chart-xs">
+										<canvas id="chartjs-dashboard-line-3rd-on-screen"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
 
 					<div class="row">
 						<div class="col-md-12">
@@ -504,19 +579,18 @@
 			new Chart(document.getElementById("chartjs-dashboard-line"), {
 				type: "line",
 				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
 					datasets: [{
-						label: "Sales ($)",
-						fill: true,
+						label: "",
+						fill: false,
 						backgroundColor: "transparent",
 						borderColor: window.theme.primary,
-						data: [2015, 1465, 1487, 1796, 1387, 2123, 2866, 2548, 3902, 4938, 3917, 4927]
+						data: [1015, 1465, 1487, 1596, 1387, 1423]
 					}, {
-						label: "Orders",
+						label: "",
 						fill: true,
 						backgroundColor: "transparent",
-						borderColor: window.theme.tertiary,
-						borderDash: [4, 4],
+						borderColor: "#DEE0E2",
 						data: [928, 734, 626, 893, 921, 1202, 1396, 1232, 1524, 2102, 1506, 1887]
 					}]
 				},
@@ -547,11 +621,128 @@
 							ticks: {
 								stepSize: 500
 							},
-							display: true,
-							borderDash: [5, 5],
+							display: false,
+							borderDash: [0, 0],
 							gridLines: {
-								color: "rgba(0,0,0,0)",
-								fontColor: "#fff"
+								color: "rgba(0,0,0,0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+    <script>
+		$(function() {
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line-2nd-on-screen"), {
+				type: "line",
+				data: {
+					labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+					datasets: [{
+						label: "",
+						fill: false,
+						backgroundColor: "transparent",
+						borderColor: window.theme.primary,
+						data: [1015, 1265, 1287, 1296, 1287, 1423]
+					}, {
+						label: "",
+						fill: true,
+						backgroundColor: "transparent",
+                        borderColor: "#DEE0E2",
+						data: [928, 734, 626, 893, 921, 1202, 1396, 1232, 1524, 2102, 1506, 1887]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.05)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 500
+							},
+							display: false,
+							borderDash: [0, 0],
+							gridLines: {
+								color: "rgba(0,0,0,0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+    <script>
+		$(function() {
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line-3rd-on-screen"), {
+				type: "line",
+				data: {
+					labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+					datasets: [{
+						label: "",
+						fill: false,
+						backgroundColor: "transparent",
+						borderColor: window.theme.primary,
+						data: [888, 684, 586, 823, 901, 1172]
+					}, {
+						label: "",
+						fill: true,
+						backgroundColor: "transparent",
+                        borderColor: "#DEE0E2",
+						data: [928, 734, 626, 893, 921, 1202, 1396, 1232, 1524, 2102, 1506, 1887]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.05)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 500
+							},
+							display: false,
+							borderDash: [0, 0],
+							gridLines: {
+								color: "rgba(0,0,0,0)"
 							}
 						}]
 					}
