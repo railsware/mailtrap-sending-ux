@@ -43,7 +43,7 @@
         </a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a href="home.html" class="sidebar-link">
               <i class="align-middle" data-feather="home"></i> <span class="align-middle">Home</span>
             </a>
@@ -80,7 +80,7 @@
 						<ul id="datatables" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="account-billing-dashboard.html">Dashboard</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="account-billing-plans.html">Plans</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="account-billing-payment-method.html">Payment Method</a></li>
+							<li class="sidebar-item active"><a class="sidebar-link" href="account-billing-payment-method.html">Payment Method</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="account-billing-payment-history.html">Payment History</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="account-billing-settings.html">Settings</a></li>
 						</ul>
@@ -123,174 +123,11 @@
 		<div class="main">
 			<main class="content">
 				<div class="container-fluid p-0">
-
 					<div class="row mb-2 mb-xl-4">
 						<div class="col-auto d-none d-sm-block">
-							<h3>Sending Recent Activity</h3>
+							<h3>Billing -> Payment Method</h3>
 						</div>
 					</div>
-                    <div class="row">
-						<div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Delivered</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                17 212
-                                            </h2>
-                                        </div>
-                                       <div class="col-6 text-right">
-                                            <span class="text-success">+35%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-                                        <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line"></canvas>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Unique Opens</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                5 679
-                                            </h2>
-                                        </div>
-                                        <div class="col-6 text-right">
-                                            <span class="text-success">+7%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line-2-on-screen"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Unique Clicks</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                1 147
-                                            </h2>
-                                        </div>
-                                        <div class="col-6 text-right">
-                                            <span class="text-warning">-3%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line-3-on-screen"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-				</div>
-                <div class="container-fluid p-0">
-
-					<div class="row mb-2 mb-xl-4">
-						<div class="col-auto d-none d-sm-block">
-							<h3>Testing Recent Activity</h3>
-						</div>
-					</div>
-                    <div class="row">
-						<div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Trapped Emails</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                17 212
-                                            </h2>
-                                        </div>
-                                       <div class="col-6 text-right">
-                                            <span class="text-success">+35%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-                                        <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line-4-on-screen"></canvas>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">HTML Errors</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                5 679
-                                            </h2>
-                                        </div>
-                                        <div class="col-6 text-right">
-                                            <span class="text-success">+7%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line-5-on-screen"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 d-flex">
-                            <div class="card flex-fill">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Spam Score</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row d-flex align-items-center mb-4">
-                                        <div class="col-6">
-                                            <h2 class="d-flex align-items-center mb-0 font-weight-light">
-                                                1 147
-                                            </h2>
-                                        </div>
-                                        <div class="col-6 text-right">
-                                            <span class="text-warning">-3%</span>
-                                            <span class="text-muted">vs Feb</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="chart chart-xs">
-										<canvas id="chartjs-dashboard-line-6-on-screen"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
 				</div>
 			</main>
 
